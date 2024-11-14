@@ -6,21 +6,26 @@
     <title>Document</title>
 </head>
 <style>
-    .loki{
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        color: green;
+    .grid-container{
+        display: grid;
+        grid-template-columns: 100px 200px;
+        grid-template-rows: 150px 100px;
+        gap: 15px;
+    }
+    .grid-item{
+        background-color: green;
+        color: red;
+        padding: 10px;
         
+
     }
 </style>
 <body>
-    <div class="loki">
-        <div>Lokesh</div>
-        <div>Lokesh Kumar</div>
-        <div>Lokesh kumar Valligatla</div>
+    <div class="grid-container">
+        <div class="grid-item">Lokesh</div>
+        <div class="grid-item">Lokesh Kumar</div>
+        <div class="grid-item">Lokesh kumar Valligatla</div>
+        <div class="grid-item">My Name is Lokesh Kumar</div>
     </div>
 </body>
 </html>
