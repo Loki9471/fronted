@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mumbai Indians</title>
+    <style>
+        /* Universal Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            color: #005cbf;
+            margin-bottom: 10px;
+        }
+
+        /* Header Section */
+        .header {
+            height: 50vh;
+            background: linear-gradient(45deg, #0066ff, #ac8504, #b60a0a, hsl(144, 94%, 43%));
+            background-size: 400% 400%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: rgb(16, 43, 215);
+            font-size: 4rem;
+            font-weight: bold;
+            position: relative;
+            animation: gradientBG 15s ease infinite;
+            overflow: hidden;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Navigation Bar */
+        .menu-nav {
+            display: flex;
+            justify-content: center;
+            background: #005cbf;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .menu-nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .menu-nav li {
+            display: inline;
+        }
+
+        .menu-nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.3rem;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .menu-nav a:hover {
+            color: #ffcc00;
+        }
+
+        /* Menu Container */
+        .menu-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        /* Menu Sections */
+        .menu-section {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .menu-section:hover {
+            transform: translateY(-10px);
+        }
+
+        .menu-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Grid Layout for Content */
+        .menu-item {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .menu-item-image img {
+            width: 100%;
+            max-width: 320px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .menu-item-image img:hover {
+            transform: scale(1.05);
+        }
+
+        .menu-item-content {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .menu-item-content ul {
+            list-style: none;
+        }
+
+        .menu-item-content ul li {
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        /* Footer Section */
+        footer {
+            background: #005cbf;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 1.2rem;
+            margin-top: 40px;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .menu-nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .header {
+                height: 50vh;
+                font-size: 2.5rem;
+            }
+
+            .menu-container {
+                width: 95%;
+            }
+
+            .menu-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .menu-item-image img {
+                width: 80%;
+                max-width: 100%;
+            }
+
+            .menu-item-content ul li {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                font-size: 2rem;
+            }
+
+            .menu-nav a {
+                font-size: 1rem;
+            }
+
+            .menu-section h2 {
+                font-size: 1.5rem;
+            }
+
+            footer {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        Mumbai Indians
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="menu-nav">
+        <ul>
+            <li><a href="#Team">Team Overview</a></li>
+            <li><a href="#Achievements">Achievements</a></li>
+            <li><a href="#Legacy">Legacy</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Section -->
+    <div class="menu-container">
+        <!-- Team Overview Section -->
+        <section class="menu-section" id="Team">
+            <h2>Mumbai Indians: Team Overview</h2>
+            <div class="menu-item">
+                <div class="menu-item-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5-PerWnQvgXi2xvhtSJfNBjPrANTaG2Byug&s" alt="Mumbai Indians">
+                </div>
+                <div class="menu-item-content">
+                    <ul>
+                        <li>Established in 2008, Mumbai Indians (MI) is one of the most iconic franchises in the Indian Premier League (IPL).</li>
+                        <li>Owned by Reliance Industries, headed by Mukesh Ambani.</li>
+                        <li>Home ground: Wankhede Stadium, Mumbai.</li>
+                        <li>Known for their blue and gold jersey, symbolizing loyalty and prosperity.</li>
+                        <li>Captained by Rohit Sharma, the most successful IPL captain.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section class="menu-section" id="Achievements">
+            <h2>Achievements</h2>
+            <div class="menu-grid">
+                <div>
+                    <h3>2013 Champions</h3>
+                    <p>The breakthrough year, MI clinched their first title against Chennai Super Kings (CSK).</p>
+                    <img src="2013.jpg" alt="2013" width="200" height="200">
+                </div>
+                <div>
+                    <h3>2015 Champions</h3>
+                    <p>Brilliant comeback after a poor start, defeating CSK again in the final.</p>
+                    <img src="2015.jpg" alt="2015" width="200" height="200">
+                </div>
+                <div>
+                    <h3>2017 Champions</h3>
+                    <p>A nail-biting one-run win over Rising Pune Supergiant marked their third title.</p>
+                    <img src="2017.jpg" alt="2017" width="200" height="200">
+                </div>
+                <div>
+                    <h3>2019 Champions</h3>
+                    <p>A dramatic last-ball victory against CSK secured the fourth championship.</p>
+                    <img src="2019.jpg" alt="2019">
+                </div>
+                <div>
+                    <h3>2020 Champions</h3>
+                    <p>Dominated Delhi Capitals to clinch their fifth and most emphatic IPL title.</p>
+                    <img src="2020.jpg" alt="2020" >
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Legacy Section -->
+        <section class="menu-section" id="Legacy">
+            <h2>Legacy</h2>
+            <p>Known for excellent talent scouting, MI has groomed several cricket legends. Their fan base, the MI Paltan, is one of the largest in the cricketing world.</p>
+            <div>
+                <h1>Legacy and Influence on Cricket:</h1>
+                <p>Player Development
+                    A team with a world-class scouting system, unearthing talents like Jasprit Bumrah, Hardik Pandya, Suryakumar Yadav, and more.
+                    Focuses on empowering young cricketers through opportunities and mentorship under legends like Sachin Tendulkar and Mahela Jayawardene.
+                    Cultural Impact
+                    Built a massive fan community, the MI Paltan, with loyal supporters across India and beyond.
+                    Elevated the IPL into a global spectacle, driving innovation in branding, marketing, and cricketing strategies.
+                    Philanthropy and Initiatives
+                    Engaged in social causes like ‘Education for All’, which supports underprivileged children’s education.
+                    Pioneers in sustainability, with efforts to promote green initiatives and minimize environmental impact.
+                    Key Takeaway</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        &copy; 2024 Mumbai Indians Fan Page
+    </footer>
+
+</body>
+</html>
