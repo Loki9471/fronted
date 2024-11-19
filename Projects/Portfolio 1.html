@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<Style>
+   * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+           #about-me img{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border: 4px solid #007BFF;
+        }
+        nav h1{
+            display: flex;
+            justify-content: center;
+            color: blue;
+        }
+        
+        nav {
+            position: fixed;
+            width: 100%;
+            padding: 50px;
+            background: linear-gradient(45deg,green,white,orange,);
+            box-shadow: 0 2px 5px rgba(87, 192, 17, 0.1);
+            background-color: lightgrey;
+            animation: gradientBG 5s ease infinite;
+            overflow: hidden;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+
+        nav ul {
+            display: flex;
+            justify-content: end;
+            list-style: none;
+            padding: 1rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            padding: 0.5rem 1.5rem;
+            margin: 0 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            
+            color: blue;
+        }
+        #about-me a {
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
+            justify-content: center;
+            padding: 10px 30px;
+            margin: 10px;
+            background-color: #e90f78;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        #about-me a:hover {
+            background-color: #0056b3;
+        }
+        section h1, section h2, section h3 {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        section p {
+            text-align: center;
+            margin: 15px 0;
+            font-size: 1rem;
+            color: #555;
+        }
+        .About {
+            width: 90%;
+            max-width: 1200px;
+            margin: 100px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .About:hover{
+            transform: translateY(-10px);
+        }
+        .resume {
+    width: 80%; /* Adjusted overall width */
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center; /* Center align content */
+}
+.resume:hover{
+    transform: translateY(-5px);
+}
+.resume img {
+    display: inline-block; /* Ensure images are inline */
+    width: 45%; /* Make images smaller to fit side-by-side */
+    margin: 5px; /* Add spacing between images */
+    border: 2px solid #ccc; /* Add a border for styling */
+    border-radius: 5px; /* Add slight rounding to corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
+}
+
+.resume img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    transition: transform 0.3s ease;
+}
+
+
+        .projects {
+            width: 90%;
+            max-width: 1200px;
+            margin: 100px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .projects:hover{
+            transform: translateY(-10px);
+        }
+        .contact {
+            width: 90%;
+            max-width: 1200px;
+            margin: 100px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .contact:hover{
+            transform: translateY(-10px);
+        }
+        .projects .project-card {
+    display: inline-block;
+    width: 30%;
+    margin: 1.5%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.projects .project-image img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.projects .project-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.projects .project-info h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.projects .project-info p {
+    color: #555;
+}
+
+/* Contact Section */
+.contact .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact .form-group label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.contact .form-group input, .contact .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact .form-group input:focus, .contact .form-group textarea:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.contact .btn {
+    align-self: flex-end;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact .btn:hover {
+    background-color: #0056b3;
+}
+
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projects .project-card {
+        width: 90%;
+        margin: 10px auto;
+    }
+}
+</Style>
+
+<body>
+    <nav >
+        <h1>  Welcome to  My protfolio</h1> 
+        <ul>
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+    <br> <br> <br> <br>
+
+    
+    <section class="About" id="about-me">
+        
+        <img src="pic.jpg" alt="profile" width="400px" height="400px" controls>
+       
+        <h1>Lokesh Kumar</h1>
+        <h2>FullStack Developer</h2>
+        <h3>Hello</h3>
+        <p>Here's who I am & what I do</p>
+        
+        <center>
+            <a href="#">RESUME</a>
+            <a href="#">PROJECTS</a>
+        </center>
+        
+        <p>
+            "I'm Valligatla Lokesh Kumar, a recent ECE graduate and aspiring Java Full Stack 
+             Developer with skills in Java, HTML, CSS, JavaScript, ReactJS, and MySQL."
+        </p>
+    </section>
+
+    <section class="resume" id="resume">
+        <h1>Resume</h1>
+        <img src="1.jpg" alt="Resume Page 1">
+        <img src="2.jpg" alt="Resume Page 2">
+    </section>
+    
+
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="project-grid">
+                <!-- Project One -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Atm.jpg" alt="ATM Application">
+                    </div>
+                    <div class="project-info">
+                        <h3>Project One</h3>
+                        <p>ATM Applications</p>
+                    </div>
+                </div>
+                <!-- Project Two -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="protfolio.jpg" alt="Portfolio">
+                    </div>
+                    <div class="project-info">
+                        <h3>Project Two</h3>
+                        <p>Portfolio</p>
+                    </div>
+                </div>
+                <!-- Project Three -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="library.jpg" alt="Library Management System">
+                    </div>
+                    <div class="project-info">
+                        <h3>Project Three</h3>
+                        <p>Library Management System</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="message">Message</label> <br>
+                    <textarea id="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message </button>
+            </form>
+        </div>
+    </section>
+    <footer style="background-color: #f8f9fa; padding: 20px; text-align: center; margin-top: 50px; border-top: 1px solid #ddd;">
+        <p>&copy; 2024 Valligatla Lokesh Kumar. All rights reserved.</p>
+        <p>
+            <a href="#about-me" style="text-decoration: none; color: #007BFF; margin: 0 10px;">About Me</a> | 
+            <a href="#resume" style="text-decoration: none; color: #007BFF; margin: 0 10px;">Resume</a> | 
+            <a href="#projects" style="text-decoration: none; color: #007BFF; margin: 0 10px;">Projects</a> | 
+            <a href="#contact" style="text-decoration: none; color: #007BFF; margin: 0 10px;">Contact</a>
+        </p>
+        <p>Follow me on:
+            <a href="https://www.linkedin.com/feed/" target="_blank" style="text-decoration: none; color: #007BFF; margin-left: 10px;">LinkedIn</a> | 
+            <a href="https://github.com/Loki9471/" target="_blank" style="text-decoration: none; color: #007BFF; margin-left: 10px;">GitHub</a>
+        </p>
+        <p>
+            <a href="tel:+91 8341529471" style="text-decoration: none; color: #007BFF;">
+                <span style="font-size: 1.2rem; margin-right: 5px;">📞</span>+91 8341529471
+            </a>
+        </p>
+    </footer>
+</body>
+</html>
