@@ -38,15 +38,29 @@
             color: blue;
         }
         
-        nav {
-            position: fixed;
+        .loki {
+            
+            position: fixed; 
             width: 100%;
             padding: 50px;
-            background: linear-gradient(45deg,green,white,orange,);
+            background: linear-gradient(45deg,green,white ,orange,blue);
             box-shadow: 0 2px 5px rgba(87, 192, 17, 0.1);
+           
             background-color: lightgrey;
             animation: gradientBG 5s ease infinite;
             overflow: hidden;
+            /* .loki{
+            
+            background: linear-gradient(45deg,green,white ,orange,blue,red);
+            
+            
+
+            color:rgb(14, 207, 162);
+        
+            font-weight: bold;
+            position: fixed;
+            animation: gradientBG 5s ease infinite;
+            overflow: hidden */
         }
 
         @keyframes gradientBG {
@@ -265,7 +279,7 @@
 </Style>
 
 <body>
-    <nav >
+    <nav class="loki">
         <h1>  Welcome to  My protfolio</h1> 
         <ul>
             <li><a href="#about-me">About Me</a></li>
@@ -280,7 +294,7 @@
     
     <section class="About" id="about-me">
         
-        <img src="2020.jpg" alt="profile" width="400px" height="400px" controls>
+        <img src="loki.jpg" alt="profile" width="1000px" height="1000px" controls>
        
         <h1>Lokesh Kumar</h1>
         <h2>FullStack Developer</h2>
