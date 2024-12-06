@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic List</title>
+</head>
+<style>
+    
+    h1{
+       
+       
+        color: green;
+    }
+    button{
+        color: blue;
+    }
+    button:hover{
+        background-color: red;
+    }
+</style>
+<body>
+    
+    <h1>Dynamically Add and Delete List Items</h1>
+    <input type="text" id="iteminput" placeholder="Enter your item">
+    <button id="additembutton">Add Item</button>
+    <ul id="itemlist"></ul>
+    <script>
+        const iteminput = document.getElementById('iteminput');
+        const button = document.getElementById('additembutton');
+        const ul = document.getElementById('itemlist');
+
+        button.addEventListener("click", function() {
+            if (iteminput.value !== "") {
+                
+                const li = document.createElement('li');
+                li.textContent = iteminput.value;
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Delete';
+                deleteButton.style.marginLeft = '10px';
+
+                deleteButton.addEventListener("click", function() {
+                    ul.removeChild(li);
+                });
+
+                li.appendChild(deleteButton);
+
+                ul.appendChild(li);
+
+                iteminput.value = '';
+            }
+        });
+    </script>
+</body>
+</html>
