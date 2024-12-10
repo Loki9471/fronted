@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 10px;
+            background: #f9f9f9;
+            padding: 1px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .delete-btn {
+            background-color: #FF4136;
+            border: none;
+            padding: 5px 10px;
+            color: white;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        .delete-btn:hover {
+            background-color: #d63228;
+        }
+    </style>
+</head>
+<body>
+    <h1>Product List</h1>
+    <button onclick="fetchProducts()">Fetch Products</button>
+    <script>
+        var productsData = [
+            { "name": "laptop", "price": 999.90 },
+            { "name": "mobile", "price": 889.90 },
+            { "name": "tv", "price": 344.90 }
+        ];
+
+        function fetchProducts() {
+            setTimeout(function () {
+                var data = productsData;
+                var list = document.createElement("ul");
+                data.forEach(function (product, index) {
+                    var listItem = document.createElement("li");
+                    listItem.textContent = `${product.name} - $${product.price.toFixed(2)}`;
+
+                    // Create Delete Button
+                    var deleteButton = document.createElement("button");
+                    deleteButton.textContent = "Delete";
+                    deleteButton.classList.add("delete-btn");
+                    deleteButton.onclick = function () {
+                        list.removeChild(listItem);
+                    };
+
+                    // Append Delete Button to List Item
+                    listItem.appendChild(deleteButton);
+                    list.appendChild(listItem);
+                });
+                document.body.appendChild(list);
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
