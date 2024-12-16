@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>LocalStorage Example </h1>
+    <label for="nameinput">Enter your name:</label>
+    <input type="text" id="nameinput" placeholder="Type Something">
+    <button id="saveButton">Save to LocalStorage</button>
+    <button id="getButton">Get Local Storage</button>
+    <button id="clearButton">Clear Local Storage</button>
+
+    <p id="result"></p>
+    <script>
+        const nameInput=document.getElementById("nameinput");
+        const saveButton=document.getElementById("saveButton");
+        const getButton=document.getElementById("getButton");
+        const clearButton=document.getElementById("clearButton");
+        const result=document.getElementById("result");
+
+        saveButton.addEventListener("click",()=>{
+            const data='default.value';
+            localStorage.setItem(1,data);
+        })
+        getButton.addEventListener("click",()=>{
+
+        })
+
+        clearButton.addEventListener("click",()=>{
+
+        })
+    </script>
+</body>
+</html>

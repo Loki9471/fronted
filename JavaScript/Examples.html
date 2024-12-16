@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fecth the data</h1>
+    <p>Click here Load posts</p>
+    <div id="posts">Posts will load here... </div>
+    <button id="button">Load more posts</button>
+    <script>
+     document.getElementById("button").addEventListener("click",function(){
+        loadPosts();
+     });
+     
+    
+function loadPosts(){
+
+function getDetails(ursername){
+   const url=`https://jsonplaceholder.typicode.com/posts`;
+   fetch (url)
+   .then(response =>{
+       if(!response.ok){
+           throw new Error(`user not found:${response.status}`);
+       }
+       return response.json();
+   })
+   .then(userData=>{
+       const posts=document.getElementById("posts");
+       userData.forEach(post=>{
+        const postElements=document.createElement("div");
+        postElements.classList.add("post");
+        postElements.innerHTML=`
+        <div class="post">Post #${post.id}:${post.title}</div>
+        <p>${post.body}</p>`;
+        post.appendChild(postElements);
+       });
+      
+   })
+   .catch(error=>{
+       console.log("Error fetching user:",error);
+   });
+}
+};
+getDetails("Lokesh");
+
+</script>
+
+</body>
+</html>
