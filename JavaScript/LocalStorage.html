@@ -22,15 +22,23 @@
         const result=document.getElementById("result");
 
         saveButton.addEventListener("click",()=>{
-            const data='default.value';
-            localStorage.setItem(1,data);
+            const data =nameInput.value;
+            if(data){
+               localStorage.setItem("name",data);
+                alert("Data Saved");
+            }else{
+                alert("please enter some data");
+            }
         })
         getButton.addEventListener("click",()=>{
-
+       const saveData=localStorage.getItem("name");
+       if(saveData){
+        output.textContent=
+       }
         })
 
         clearButton.addEventListener("click",()=>{
-
+         
         })
     </script>
 </body>
