@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: red;
+    }
+    
+    P{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    button{
+            display: grid;
+           justify-content: center;
+           align-items: center;
+           height: 50px;
+           width: 200px;
+           margin: auto;
+           border-radius: 10px;
+           box-shadow: rgb(red, green, blue);
+           background-color: greenyellow;
+           color: white;
+        }
+</style>
+<body>
+    <div>
+        <h1>Iam Lokesh Kumar from Andhra Pradesh</h1>
+
+        <p>How to fetch URL</p>
+
+        <button>Load posts here......</button>
+
+
+
+    </div>
+
+    <script>
+
+        function posts(username){
+            const url=`https://api.github.com/users/${username}`;
+        
+        fetch(url,options)
+        .then(response =>{
+            alert("Successfully loaded");
+        })
+        .catch(error => {
+            alert("its not fetched correctly");
+        });
+    }
+    posts("Loki9471");
+    </script>
+</body>
+</html>
